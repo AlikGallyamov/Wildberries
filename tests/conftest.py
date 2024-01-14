@@ -31,12 +31,13 @@ def browser_settings():
     }
     login = os.getenv('LOGIN')
     password = os.getenv('PASSWORD')
+    options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
         command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
         options=options)
 
     browser.config.driver = driver
-    options.capabilities.update(selenoid_capabilities)
+    browser.config.driver_options = driver_options
 
     yield
 
