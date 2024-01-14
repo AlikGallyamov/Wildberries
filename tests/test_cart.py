@@ -2,6 +2,7 @@ from wildberries_tests.data.data_cards import card
 from wildberries_tests.pages.main_page import MainPage
 import pytest
 
+
 @pytest.fixture()
 def pre_add_to_cart():
     main_page = MainPage()

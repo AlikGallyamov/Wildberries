@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from wildberries_tests.controls import attach
+from dotenv import load_dotenv
 
 
 @pytest.fixture(scope='session', autouse=True)

@@ -16,6 +16,7 @@ card = Card(
     non_existent_article='8944165849321186418794'
 )
 
+
 @dataclasses.dataclass
 class Texts:
     nothing_found: str = 'Попробуйте поискать по-другому или сократить запрос'
