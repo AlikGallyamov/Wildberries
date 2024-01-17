@@ -14,7 +14,9 @@
 
 - Поиск товара по артикулу  
 <img src="readme_files/search_by_article.gif" width="600"/>
+
 ---
+
 ### Стек: Python, Selene, Pytest, Jenkins, Selenoid, Allure-report
 <p align="left">
 <img align="center" src="logo/python.svg" width="50"/>
