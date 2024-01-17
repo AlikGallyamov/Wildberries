@@ -3,8 +3,8 @@ import os
 from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from pydantic_settings import BaseSettings
 
+from config import Settings
 from wildberries_tests.controls import attach
 from dotenv import load_dotenv
 
@@ -14,28 +14,12 @@ def load_env():
     load_dotenv()
 
 
-class Settings(BaseSettings):
-    window_width: str = '1600'
-    window_height: str = '950'
-    base_url: str = 'https://www.wildberries.ru'
-    remote: bool = True
-    selenoid_capabilities: dict = {
-        "browserName": "chrome",
-        "browserVersion": "100.0",
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
-
-
 @pytest.fixture(autouse=True)
 def browser_settings():
     config = Settings()
     options = Options()
 
     driver_options = webdriver.ChromeOptions()
-    driver_options.page_load_strategy = 'eager'
 
     if config.remote:
         login = os.getenv('LOGIN')
@@ -46,10 +30,12 @@ def browser_settings():
             options=options)
         browser.config.driver = driver
 
+    driver_options.page_load_strategy = config.page_load_strategy
     browser.config.driver_options = driver_options
     browser.config.base_url = config.base_url
     browser.config.window_width = config.window_width
     browser.config.window_height = config.window_height
+
     yield
 
     attach.add_html(browser)
