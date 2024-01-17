@@ -1,6 +1,6 @@
 <h1 align="center">Проект по тестированию интернет-магазина <a href="https://www.wildberries.ru/"> Wildberries </a> </h1>
 
----
+
 ### Автотестами проверяется:
 
 - Добавление товара в корзину  
@@ -12,14 +12,15 @@
 - Поиск товара по артикулу
 <img src="readme_files/search_by_article.gif" width="600"/>
 ---
-<img src="logo/python.svg" width="50"/>
-<img src="logo/selene.png" width="50"/>
-<img src="logo/pytest-original.svg" width="50"/>
-<img src="logo/Jenkins.svg" width="50"/>
-<img src="logo/Selenoid.svg" width="50"/>
-<img src="logo/Allure_new.png" width="50"/>
-<img src="logo/Telegram.svg" width="50"/>
-
+<p align="left">
+<img align="center" src="logo/python.svg" width="50"/>
+<img align="center"  src="logo/selene.png" width="50"/>
+<img align="center"  src="logo/pytest-original.svg" width="50"/>
+<img align="center"  src="logo/Jenkins.svg" width="50"/>
+<img align="center"  src="logo/Selenoid.svg" width="50"/>
+<img align="center"  src="logo/Allure_new.png" width="50"/>
+<img align="center"  src="logo/Telegram.svg" width="50"/>
+</p>
 
 
 
