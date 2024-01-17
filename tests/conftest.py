@@ -19,6 +19,14 @@ class Settings(BaseSettings):
     window_height: str = '950'
     base_url: str = 'https://www.wildberries.ru'
     remote: bool = True
+    selenoid_capabilities: dict = {
+        "browserName": "chrome",
+        "browserVersion": "100.0",
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": True
+        }
+    }
 
 
 @pytest.fixture(autouse=True)
@@ -27,18 +35,12 @@ def browser_settings():
     options = Options()
 
     driver_options = webdriver.ChromeOptions()
-    selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": "100.0",
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
+    driver_options.page_load_strategy = 'eager'
+
     if config.remote:
         login = os.getenv('LOGIN')
         password = os.getenv('PASSWORD')
-        options.capabilities.update(selenoid_capabilities)
+        options.capabilities.update(config.selenoid_capabilities)
         driver = webdriver.Remote(
             command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
             options=options)
