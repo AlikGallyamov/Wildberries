@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    window_width: str = '1600'
-    window_height: str = '950'
+    window_width: str = '1900'
+    window_height: str = '1028'
     base_url: str = 'https://www.wildberries.ru'
     remote: bool = True
     page_load_strategy: str = 'normal'
