@@ -3,13 +3,16 @@
 
 ### Автотестами проверяется:
 
-Добавление товара в корзину  
+- Добавление товара в корзину  
 <img src="readme_files/add_to_cart.gif" width="600"/>  
-Удаление товара из корзины  
+
+- Удаление товара из корзины
 <img src="readme_files/remove_from_cart.gif" width="600"/>  
-Поиск товара по названию  
+
+- Поиск товара по названию  
 <img src="readme_files/search_by_name.gif" width="600"/>  
-Поиск товара по артикулу  
+
+- Поиск товара по артикулу  
 <img src="readme_files/search_by_article.gif" width="600"/>
 ---
 ### Стек: Python, Selene, Pytest, Jenkins, Selenoid, Allure-report
