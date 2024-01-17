@@ -32,7 +32,7 @@ def browser_settings():
         "browserVersion": "100.0",
         "selenoid:options": {
             "enableVNC": True,
-            "enableVideo": True
+            "enableVideo": False
         }
     }
     if config.remote:
