@@ -60,7 +60,7 @@ git clone https://github.com/AlikGallyamov/Wildberries.git
   ```ruby
   cd Wildberries
   python -m venv .venv
-  .venv\Scripts\activate
+  .venv/Scripts/activate
   ```
 3. Установите зависимости с помощью pip
   ```ruby
