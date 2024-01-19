@@ -54,7 +54,7 @@
 
 1. Клонируйте репозиторий
 ```ruby
-gh repo clone AlikGallyamov/Wildberries
+git clone https://github.com/AlikGallyamov/Wildberries.git
 ```
 2. Создайте и активируйте виртуальное окружение
   ```ruby
