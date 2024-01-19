@@ -66,7 +66,7 @@ git clone https://github.com/AlikGallyamov/Wildberries.git
   ```ruby
   pip install -r requirements.txt
   ```
-3. Установите  <a href="https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.26.0/allure-commandline-2.26.0.zip"> Allure </a>. Распакуйте архив в папку с проектом
+3. Установите  <a href="https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.26.0/allure-commandline-2.26.0.zip"> Allure </a>. Распакуйте архив в папку с проектом. Распакованную папку переименуйте в "allure"
 4. Запустите автотесты 
   ```ruby
   pytest tests
