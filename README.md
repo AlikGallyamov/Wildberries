@@ -1,21 +1,6 @@
 <h1 align="center">Проект по тестированию интернет-магазина <a href="https://www.wildberries.ru/"> Wildberries </a> </h1>
 
 
-### Автотестами проверяется:
-
-- Добавление товара в корзину  
-<img src="readme_files/add_to_cart.gif" width="600"/>  
-
-- Удаление товара из корзины
-<img src="readme_files/remove_from_cart.gif" width="600"/>  
-
-- Поиск товара по названию  
-<img src="readme_files/search_by_name.gif" width="600"/>  
-
-- Поиск товара по артикулу  
-<img src="readme_files/search_by_article.gif" width="600"/>
-
----
 
 ### Стек: Python, Selene, Pytest, Jenkins, Selenoid, Allure-report
 <p align="left">
@@ -27,8 +12,65 @@
 <img align="center"  src="logo/Allure_new.png" width="50"/>
 </p>
 
+---
+
+### Автотестами проверяется:
+
+- Добавление товара в корзину  
+- Удаление товара из корзины
+- Поиск товара по названию  
+- Поиск товара по артикулу  
+- Поиск несуществующего товара  
+
+Пример выполнения теста
+<img src="readme_files/add_to_cart.gif" width="600"/>  
+
+---
+
+Отчёт о прохождении будет сгенерирован в allure-report с подробными шагами, скриншотами, видео.
+Также, при необходимости можно подключить уведомления в Telegram, skype, discord, slack  
 
 
+<img align="left" src="readme_files/allure_report.png" width="400" height="200"/>  
+<img align="right" src="readme_files/tg_screen.png" width="200" height="200"/>.
+
+---
+
+
+### Как запустить
+
+###### Удаленно
+
+1. Открыть <a href="https://jenkins.autotests.cloud/job/009-JenkiLi-wildberries/"> jenkins-control  </a>
+2. Нажать Build now
+3. Дождаться завершения 
+4. Перейти в allure отчет
+
+<img src="readme_files/jenkins_control.png" width="400" height="200"/>  
+
+###### Локально
+
+1. Клонируйте репозиторий
+```ruby
+gh repo clone AlikGallyamov/Wildberries
+```
+2. Создайте и активируйте виртуальное окружение
+  ```ruby
+  python -m venv .venv
+  source .venv/bin/activate
+  ```
+3. Установите зависимости с помощью pip
+  ```ruby
+  pip install -r requirements.txt
+  ```
+4. Запустите автотесты 
+  ```ruby
+  remote=False pytest tests
+  ```
+5. Получите отчёт allure
+```ruby
+allure serve allure-results
+``` 
 
 
 
