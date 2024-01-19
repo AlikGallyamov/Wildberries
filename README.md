@@ -73,7 +73,7 @@ git clone https://github.com/AlikGallyamov/Wildberries.git
   ```
 5. Получите отчёт allure
 ```ruby
-allure serve allure-results
+allure/bin/allure.bat serve
 ``` 
 
 
