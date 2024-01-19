@@ -34,7 +34,7 @@
 
 
 <img align="left" src="readme_files/allure_report.png" width="400" height="300"/>  
-<img align="center" src="readme_files/tg_screen.png" width="200" height="300"/>.
+<img align="center" src="readme_files/tg_screen.png" width="300" height="300"/>.
 
 ---
 
