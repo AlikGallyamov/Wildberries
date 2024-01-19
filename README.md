@@ -68,7 +68,7 @@ git clone https://github.com/AlikGallyamov/Wildberries.git
   ```
 4. Запустите автотесты 
   ```ruby
-  remote=False pytest tests
+  pytest tests
   ```
 5. Получите отчёт allure
 ```ruby
