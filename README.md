@@ -58,8 +58,8 @@ git clone https://github.com/AlikGallyamov/Wildberries.git
 ```
 2. Создайте и активируйте виртуальное окружение
   ```ruby
-  python -m venv .venv
   cd Wildberries
+  python -m venv .venv
   .venv\Scripts\activate
   ```
 3. Установите зависимости с помощью pip
